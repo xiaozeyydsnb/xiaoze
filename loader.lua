@@ -1,6 +1,6 @@
 local a = "https://raw."
 local b = "githubusercontent.com/"
-local c = "xiaozeyydsnb/xiaozenb/main/"
+local c = "xiaozeyydsnb/xiaoze/main/"
 
 local BASE = a..b..c
 
