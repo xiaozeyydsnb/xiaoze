@@ -1,30 +1,7 @@
-local a = "https://raw."
-local b = "githubusercontent.com/"
-local c = "xiaozeyydsnb/xiaoze/main/"
-
-local BASE = a..b..c
-
-local function LoadModule(name)
-    local ok,res = pcall(function()
-        return game:HttpGet(BASE .. name .. ".lua")
-    end)
-
-    if not ok then
-        warn("加载失败: "..name)
-        return
-    end
-
-    local fn = loadstring(res)
-
-    if fn then
-        return fn()
-    end
+local b="bG9jYWwgYSA9ICJodHRwczovL3Jhdy4iCmxvY2FsIGIgPSAiZ2l0aHVidXNlcmNvbnRlbnQuY29tLyIKbG9jYWwgYyA9ICJ4aWFvemV5eWRzbmIveGlhb3plbmIvbWFpbi8iCgpsb2NhbCBCQVNFID0gYS4uYi4uYwoKbG9jYWwgZnVuY3Rpb24gTG9hZE1vZHVsZShuYW1lKQogICAgbG9jYWwgb2sscmVzID0gcGNhbGwoZnVuY3Rpb24oKQogICAgICAgIHJldHVybiBnYW1lOkh0dHBHZXQoQkFTRSAuLiBuYW1lIC4uICIubHVhIikKICAgIGVuZCkKCiAgICBpZiBub3Qgb2sgdGhlbgogICAgICAgIHdhcm4oIuWKoOi9veWksei0pTogIi4ubmFtZSkKICAgICAgICByZXR1cm4KICAgIGVuZAoKICAgIGxvY2FsIGZuID0gbG9hZHN0cmluZyhyZXMpCgogICAgaWYgZm4gdGhlbgogICAgICAgIHJldHVybiBmbigpCiAgICBlbmQKZW5kCgppZiBnZXRnZW52KCkuWGlhb1plTG9hZGVkIHRoZW4KICAgIHJldHVybgplbmQKCmdldGdlbnYoKS5YaWFvWmVMb2FkZWQgPSB0cnVlCgpMb2FkTW9kdWxlKCJtYWluIikK"
+local s=game:GetService("HttpService")
+local d=s:Base64Decode(b)
+local f=loadstring(d)
+if f then
+    return f()
 end
-
-if getgenv().XiaoZeLoaded then
-    return
-end
-
-getgenv().XiaoZeLoaded = true
-
-LoadModule("main")
