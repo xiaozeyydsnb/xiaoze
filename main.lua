@@ -3507,11 +3507,11 @@ end
 
 
 pcall(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaozeyydsnb/xiaozenb/main/config.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaozeyydsnb/xiaoze/main/config.lua"))()
 end)
 
 pcall(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaozeyydsnb/xiaozenb/main/notify.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaozeyydsnb/xiaoze/main/notify.lua"))()
 end)
 
 return Main
